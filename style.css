@@ -711,6 +711,11 @@ ul {
     background-color: var(--mavi-koyu);
 }
 
+/* Arama kutusu ile hızlı filtre pill'leri arası boşluk */
+.hizli-filtreler {
+    margin-top: var(--sp-5);
+}
+
 /* Sonuç sayısı */
 .sonuc-bilgi {
     font-size: 13px;
@@ -1206,5 +1211,293 @@ ul {
     .siralama-bari {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+/* ============================================================
+   17. Kişi 1 — İlan formu, ilan detay, yönetim paneli
+   ============================================================ */
+
+/* ── Form sayfası (ilan-ekle.php + yonet.php) ────────────── */
+.form-sayfa {
+    max-width: 720px;
+}
+
+.form-kart {
+    background-color: var(--bg-kart);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-6);
+    box-shadow: var(--golge-kart);
+}
+
+.form-baslik {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--metin-birincil);
+    margin-bottom: var(--sp-2);
+}
+
+.form-hata {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--alert-danger-renk);
+}
+
+.form-yardim {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--metin-soluk);
+}
+
+.form-aksiyon {
+    display: flex;
+    gap: var(--sp-3);
+    align-items: center;
+    margin-top: var(--sp-2);
+    flex-wrap: wrap;
+}
+
+/* ── Durum radio seçenekleri ─────────────────────────────── */
+.durum-secenekleri {
+    display: flex;
+    gap: var(--sp-3);
+}
+
+.durum-secenek {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+    user-select: none;
+}
+
+.durum-secenek:hover {
+    border-color: var(--mavi-birincil);
+}
+
+.durum-secenek input[type="radio"] {
+    accent-color: var(--mavi-birincil);
+}
+
+.durum-secenek:has(input:checked) {
+    border-color: var(--mavi-birincil);
+    background-color: var(--mavi-acik-bg);
+    color: var(--mavi-koyu);
+    font-weight: 600;
+}
+
+/* ── Başarı ekranı + yönetim linki ───────────────────────── */
+.basari-ikon {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: var(--sp-4);
+}
+
+.token-kutu {
+    display: flex;
+    gap: var(--sp-2);
+}
+
+.token-kutu .form-input {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    color: var(--metin-orta);
+}
+
+.token-kutu .btn-secondary {
+    white-space: nowrap;
+}
+
+/* ── İlan detay sayfası ──────────────────────────────────── */
+.ilan-detay-layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: var(--sp-6);
+    align-items: start;
+}
+
+.ilan-detay-gorsel {
+    position: relative;
+    background-color: var(--bg-filtre);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ilan-detay-emoji {
+    font-size: 96px;
+    opacity: 0.7;
+}
+
+.ilan-detay-badge {
+    position: absolute;
+    top: var(--sp-4);
+    left: var(--sp-4);
+}
+
+.ilan-detay-aciklama {
+    background-color: var(--bg-kart);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-5);
+    margin-top: var(--sp-5);
+}
+
+.ilan-detay-aciklama h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: var(--sp-3);
+    color: var(--metin-birincil);
+}
+
+.ilan-detay-aciklama p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--metin-orta);
+}
+
+.ilan-detay-yan {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
+    position: sticky;
+    top: 80px;
+}
+
+.ilan-bilgi-karti {
+    background-color: var(--bg-kart);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-5);
+}
+
+.ilan-detay-baslik {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--metin-birincil);
+    line-height: 1.3;
+}
+
+.ilan-detay-yazar {
+    font-size: 14px;
+    color: var(--metin-soluk);
+    margin-top: 4px;
+}
+
+.ilan-detay-fiyat {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--mavi-birincil);
+    margin: var(--sp-4) 0;
+}
+
+/* ── Gelen talepler (yonet.php) ──────────────────────────── */
+.talep-sayac {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    margin-left: 6px;
+    border-radius: 11px;
+    background-color: var(--mavi-birincil);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.talep-listesi {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+}
+
+.talep-item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--sp-3) var(--sp-4);
+    background-color: var(--bg-sayfa);
+}
+
+.talep-ust {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.talep-tarih {
+    font-size: 12px;
+    color: var(--metin-soluk);
+}
+
+.talep-mesaj {
+    font-size: 14px;
+    color: var(--metin-orta);
+    line-height: 1.5;
+}
+
+/* ── Tehlikeli bölge — silme ─────────────────────────────── */
+.tehlike-bolge {
+    border-color: #FECACA;
+}
+
+.btn-sil {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid var(--alert-danger-border);
+    border-radius: var(--radius-md);
+    background-color: #fff;
+    color: var(--alert-danger-renk);
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.btn-sil:hover {
+    background-color: var(--alert-danger-border);
+    color: #fff;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .ilan-detay-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .ilan-detay-yan {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .durum-secenekleri {
+        flex-direction: column;
+    }
+
+    .token-kutu {
+        flex-direction: column;
     }
 }
