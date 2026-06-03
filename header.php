@@ -34,7 +34,7 @@ $aktif_sayfa = $aktif_sayfa ?? '';
         <div class="navbar-links">
             <a href="<?= SITE_URL ?>/index.php"
                class="<?= $aktif_sayfa === 'anasayfa' ? 'aktif' : '' ?>">Ana Sayfa</a>
-            <a href="<?= SITE_URL ?>/bolum.php"
+            <a href="<?= SITE_URL ?>/bolumler.php"
                class="<?= $aktif_sayfa === 'bolumler' ? 'aktif' : '' ?>">Bölümler</a>
             <a href="<?= SITE_URL ?>/ara.php"
                class="<?= $aktif_sayfa === 'arama' ? 'aktif' : '' ?>">Arama</a>

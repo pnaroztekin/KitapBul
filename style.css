@@ -713,7 +713,12 @@ ul {
 
 /* Arama kutusu ile hızlı filtre pill'leri arası boşluk */
 .hizli-filtreler {
-    margin-top: var(--sp-5);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    margin-top: var(--sp-6);
+    padding-top: var(--sp-4);
 }
 
 /* Sonuç sayısı */
@@ -1499,5 +1504,158 @@ ul {
 
     .token-kutu {
         flex-direction: column;
+    }
+}
+
+/* ============================================================
+   17. bolumler.php — Tüm bölümler listeleme sayfası
+   ============================================================ */
+
+.bolumler-hero {
+    text-align: center;
+    padding: var(--sp-12) 0 var(--sp-8);
+}
+
+.bolumler-hero p {
+    font-size: 15px;
+    color: var(--metin-soluk);
+    margin-top: var(--sp-2);
+}
+
+.bolumler-hero p strong {
+    color: var(--mavi-birincil);
+}
+
+.bolumler-grup {
+    margin-bottom: var(--sp-12);
+}
+
+.bolumler-grup-baslik {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--metin-soluk);
+    margin-bottom: var(--sp-5);
+    padding-bottom: var(--sp-3);
+    border-bottom: 1px solid var(--border);
+}
+
+.bolumler-karti {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: var(--bg-kart);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-6);
+    box-shadow: var(--golge-kart);
+    transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s;
+    color: inherit;
+}
+
+.bolumler-karti:hover {
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
+    transform: translateY(-3px);
+    border-color: #BFDBFE;
+}
+
+.bolumler-karti-ust {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--sp-2);
+}
+
+.bolumler-karti-ikon {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.bolumler-karti-sayi {
+    font-size: 12px;
+    font-weight: 600;
+    background-color: var(--mavi-acik-bg);
+    color: var(--mavi-birincil);
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.bolumler-karti-bos {
+    background-color: var(--bg-filtre);
+    color: var(--metin-soluk);
+}
+
+.bolumler-karti-ad {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--metin-birincil);
+    line-height: 1.3;
+}
+
+.bolumler-karti-fak {
+    font-size: 12px;
+    color: var(--metin-soluk);
+}
+
+.bolumler-karti-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--mavi-birincil);
+    margin-top: auto;
+    padding-top: var(--sp-3);
+}
+
+.bolumler-karti:hover .bolumler-karti-link {
+    text-decoration: underline;
+}
+
+.bolumler-cta {
+    background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+    border: 1px solid #BFDBFE;
+    border-radius: var(--radius-lg);
+    padding: var(--sp-8);
+    margin-top: var(--sp-4);
+}
+
+.bolumler-cta-icerik {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-6);
+    flex-wrap: wrap;
+}
+
+.bolumler-cta h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--metin-birincil);
+    margin-bottom: 4px;
+}
+
+.bolumler-cta p {
+    font-size: 14px;
+    color: var(--metin-soluk);
+}
+
+.bolumler-cta-butonlar {
+    display: flex;
+    gap: var(--sp-3);
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .bolumler-cta-icerik {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .bolumler-cta-butonlar {
+        width: 100%;
+    }
+    .bolumler-cta-butonlar .btn-primary,
+    .bolumler-cta-butonlar .btn-secondary {
+        flex: 1;
+        justify-content: center;
     }
 }

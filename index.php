@@ -65,7 +65,7 @@ require_once __DIR__ . '/header.php';
 <!-- ═══════════════════════════════════════════════════════
      HERO — arama kutusu + hızlı filtre pilleri
 ═══════════════════════════════════════════════════════ -->
-<section class="sayfa-hero">
+<section class="sayfa-hero" style="text-align:center;">
     <div class="container">
         <h1>İkinci el ders kitabı ara</h1>
         <p>Üniversite öğrencilerinden, üniversite öğrencilerine.</p>

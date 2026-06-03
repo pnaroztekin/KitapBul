@@ -118,8 +118,7 @@ require_once __DIR__ . '/header.php';
 <div class="bolum-nav-wrapper">
     <div class="container">
         <div class="bolum-nav-scroll">
-            <a href="bolum.php?id=<?= $bolum_id ?>"
-               class="bolum-chip <?= !isset($_GET['id']) ? '' : 'aktif-devre' ?>">
+            <a href="bolumler.php" class="bolum-chip">
                 Tüm Bölümler
             </a>
             <?php foreach ($tum_bolumler as $b): ?>
