@@ -16,6 +16,9 @@ define('DB_CHARSET', 'utf8mb4');
 define('SITE_ADI', 'KitapBul');
 define('SITE_URL', 'http://localhost/kitapbul');
 
+// Listeleme/arama/bölüm sayfalarında sayfa başına gösterilecek ilan sayısı.
+define('SAYFA_BASINA_ILAN', 9);
+
 function db_baglan(): mysqli {
     $baglanti = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     if ($baglanti->connect_error) {
